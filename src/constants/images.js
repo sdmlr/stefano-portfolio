@@ -7,6 +7,9 @@ import about02 from '../assets/about02.webp'
 import about03 from '../assets/about03.webp'
 import about04 from '../assets/about04.webp'
 
+import smartphone from '../assets/smartphone.webp'
+import email from '../assets/plane.webp'
+
 export default {
     logo,
     profile,
@@ -15,4 +18,6 @@ export default {
     about02,
     about03,
     about04,
+    smartphone,
+    email
 };
