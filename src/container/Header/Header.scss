@@ -123,8 +123,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 1s ease-out; /* Smooth updates */
-    will-change: transform; /* Optimizes animation performance */
+    transition: transform 1s ease-out; 
+    will-change: transform; 
 
     img {
       width: 60%;
@@ -133,7 +133,7 @@
   }
 
   div:hover {
-    transform: translateY(-10px); /* Combine rotation and hover */
+    transform: translateY(-10px); 
   }
 
   div:nth-child(1) {
