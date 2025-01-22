@@ -1,7 +1,7 @@
 import React from "react";
 import { easeInOut, motion, transform } from "framer-motion";
 
-import { AppWrap } from '../../wrapper'
+import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./Header.scss";
 
@@ -11,10 +11,10 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: 'easeInOut'
-    }
-  }
-}
+      ease: "easeInOut",
+    },
+  },
+};
 
 const Header = () => {
   return (
@@ -26,11 +26,15 @@ const Header = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span>👋</span>
+            <div className="prile-picture">
+              <img src={images.profile} alt="profile_bg" />
+            </div>
+
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
               <h1 className="head-text">Stefano</h1>
             </div>
+            <span>👋</span>
           </div>
 
           <div className="tag-cmp app__flex">
@@ -46,29 +50,29 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} alt="profile_bg" />
+        <img src={images.logo} alt="profile_bg" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: easeInOut }}
-          src={images.circle}
+          src={images.hexagon}
           alt="profile_circle"
           className="overlay_circle"
         />
       </motion.div>
 
       <motion.div
-      variants={scaleVariants}
-      whileInView={scaleVariants.whileInView}
-      className="app__header-circles"
+        variants={scaleVariants}
+        whileInView={scaleVariants.whileInView}
+        className="app__header-circles"
       >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => {
+        {[images.figma, images.node, images.reactIcon].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="circle" />
           </div>
-        })}
+        ))}
       </motion.div>
     </div>
   );
 };
 
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, "home");
