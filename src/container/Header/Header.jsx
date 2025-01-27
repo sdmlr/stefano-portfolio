@@ -41,8 +41,8 @@ const Header = () => {
         className="app__header-info"
       >
         <div className="app__header-badge">
-          <div className="badge-cmp app__flex">
 
+          <div className="badge-cmp app__flex">
             <div className="prile-picture">
               <img src={images.profile} alt="profile_bg" />
             </div>
@@ -66,8 +66,9 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        {/* <img src={images.logo} alt="profile_bg" />
-        <motion.img
+        <h1>Portfolio</h1>
+        {/* <img src={images.pm} alt="profile_bg" /> */}
+        {/* <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: easeInOut }}
           src={images.hexagon}
@@ -87,7 +88,7 @@ const Header = () => {
             key={`circle-${index}`}
             style={{
               transform: `translate(${
-                -(mousePosition.x - window.innerWidth / 2) / 30
+                (mousePosition.x - window.innerWidth / 2) / 30
               }px, ${(mousePosition.y - window.innerHeight / 2) / 30}px)`,
               boxShadow:
                 "0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1)",

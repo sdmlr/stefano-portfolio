@@ -17,6 +17,8 @@ import reactIcon from '../assets/React-icon.svg.png'
 import smartphone from "../assets/smartphone.webp";
 import email from "../assets/plane.webp";
 
+import pm from "../assets/PM.webp"
+
 export default {
   logo,
   profile,
@@ -31,4 +33,5 @@ export default {
   reactIcon,
   smartphone,
   email,
+  pm,
 };
