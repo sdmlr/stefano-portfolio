@@ -57,7 +57,7 @@ const ProjectDetail = () => {
             }`}
           >
             <div className="app__project-section-info">
-              <h4>{detail.title}</h4>
+              <h4>{detail.subTitle}</h4>
               <h3>{detail.title}</h3>
               <p>{detail.content}</p>
             </div>
