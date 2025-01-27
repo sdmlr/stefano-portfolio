@@ -1,9 +1,9 @@
 #home {
   position: relative;
   background: linear-gradient(145deg, #ffffff, #b1cae5);
-  background-color: rgb(223, 231, 248);
+  // background-color: rgb(223, 231, 248);
   background-size: cover;
-  // background-repeat: repeat;
+  background-repeat: repeat;
   background-position: left;
 
   .app__wapper {
@@ -84,6 +84,7 @@
       width: 100%;
       text-transform: uppercase;
       text-align: left;
+      font-weight: 500;
     }
   }
 
@@ -188,7 +189,7 @@
   flex: 1;
   height: 100%;
   margin-left: 15rem;
-  margin-right: 10rem;
+  margin-right: 2rem;
   display: flex;
   align-items: center;
   justify-content: right;
