@@ -1,21 +1,36 @@
-import React from 'react';
+import React from "react";
 
-import { About, Footer, Header, Skills, Testimonial, Work } from './container';
-import { Navbar } from './components';
-import './App.scss'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { About, Footer, Header, Skills, Work } from "./container";
+import { Navbar } from "./components";
+import ProjectDetail from './container/Work/Projects/ProjectDetails';
+import "./App.scss";
 
 const App = () => {
   return (
-    <div className='app'>
+    <Router>
+      <div className="app">
         <Navbar />
-        <Header />
-        <About />        
-        <Work />        
-        <Skills />        
-        {/* <Testimonial />         */}
-        <Footer />
-    </div>
+        <Routes>
+          {/* Main Landing Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <About />
+                <Work />
+                <Skills />
+                <Footer />
+              </>
+            }
+          />
+          {/* Dynamic Detail Page */}
+          <Route path="/project/:slug" element={<ProjectDetail />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
