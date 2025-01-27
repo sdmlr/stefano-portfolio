@@ -37,10 +37,10 @@ const Work = () => {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if(item ==='All') {
-        setFilterWork(works)
+      if (item === "All") {
+        setFilterWork(works);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)))
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
       }
     }, 500);
   };
@@ -77,7 +77,9 @@ const Work = () => {
               <img src={urlFor(work.imageUrl)} alt={work.name} />
 
               <motion.div
-                whileHover={{ opacity: [0, 1] }}
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                animate={{ opacity: 0 }}
                 transition={{
                   duration: 0.25,
                   ease: "easeInOut",
@@ -85,7 +87,10 @@ const Work = () => {
                 }}
                 className="app__work-hover app__flex"
               >
-                <a href={`/project/${work.project?.slug?.current}`} target="_self">
+                <a
+                  href={`/project/${work.project?.slug?.current}`}
+                  target="_self"
+                >
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -95,16 +100,19 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={work.codeLink} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <AiFillGithub />
-                  </motion.div>
-                </a>
+
+                {work.codeLink && (
+                  <a href={work.codeLink} target="_blank" rel="noreferrer">
+                    <motion.div
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 0.9] }}
+                      transition={{ duration: 0.25 }}
+                      className="app__flex"
+                    >
+                      <AiFillGithub />
+                    </motion.div>
+                  </a>
+                )}
               </motion.div>
             </div>
 
@@ -126,7 +134,7 @@ const Work = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Work, 'app__works'),
-  'work',
-  'app__primarybg'
+  MotionWrap(Work, "app__works"),
+  "work",
+  "app__primarybg"
 );
