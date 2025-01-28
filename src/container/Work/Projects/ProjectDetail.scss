@@ -7,6 +7,7 @@
   .app__project-header {
     text-align: center;
     padding: 4rem;
+
     // background-image: linear-gradient(45deg, #0a6628 0%, #236338d0 35%);
 
     .project-title {
@@ -14,19 +15,22 @@
       font-weight: bold;
       margin-bottom: 1rem;
       color: #ffffff;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .project-category {
-      font-size: 0.9rem;
-      color: #a8a8a8;
+      font-size: 0.8rem;
+      color: #f2f2f2;
       margin-bottom: 1rem;
     }
 
     .project-intro {
       font-size: 1rem;
-      color: #d3d3d3;
+      color: #ffffff;
       line-height: 1.6;
       margin-bottom: 1rem;
+      padding: 2rem 25rem 2rem 25rem;
     }
   }
 
@@ -38,13 +42,20 @@
       align-items: center;
       justify-content: space-between;
       padding: 2rem 30rem 2rem 30rem;
-    //   border-radius: 10px;
-    //   margin-bottom: 1.5rem;
+      //   border-radius: 10px;
+      //   margin-bottom: 1.5rem;
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
 
       h3 {
         font-size: 1.5rem;
         font-weight: bold;
         color: #333;
+        margin-top: 0.8rem;
         margin-bottom: 1rem;
       }
 
@@ -68,7 +79,7 @@
         background-color: #f9f9f9;
 
         img {
-            margin-left: 4rem;
+          margin-left: 4rem;
         }
       }
 
@@ -78,7 +89,7 @@
         flex-direction: row-reverse;
 
         img {
-            margin-right: 4rem;
+          margin-right: 4rem;
         }
 
         p,
@@ -95,21 +106,19 @@
         padding: 2rem 4rem 2rem 4rem;
         flex-direction: column;
       }
-      
 
       @media screen and (max-width: 1500px) {
         padding: 2rem 4rem 2rem 4rem;
         flex-direction: column;
       }
-  
+
       @media screen and (max-width: 800px) {
         padding: 2rem 4rem 2rem 4rem;
         flex-direction: column;
-        
       }
     }
     .project-image {
-        width: 200px;
+      width: 200px;
     }
   }
 
@@ -176,23 +185,23 @@
         }
       }
     }
-}
-.project-tags {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-
-  .tag {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #333;
-    padding: 0.3rem 0.6rem;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
   }
-}
+  .project-tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    .tag {
+      background-color: rgba(0, 0, 0, 0.1);
+      color: #333;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .modal {
@@ -248,7 +257,6 @@
   transform: scale(2); /* Adjust scale for zoom */
   cursor: zoom-out; /* Indicate zoom-out capability */
 }
-
 
 .close-button {
   position: absolute;

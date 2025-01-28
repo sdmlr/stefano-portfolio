@@ -36,7 +36,7 @@ const ProjectDetail = () => {
     <div className="app__project-detail">
       <section
         className="app__project-header"
-        style={{ background: project.themeColor }}
+        style={{ background: project.gradient || project.themeColor }}
       >
         <p className="project-category">{project.category}</p>
         <h1 className="project-title">{project.title}</h1>
@@ -57,7 +57,7 @@ const ProjectDetail = () => {
             }`}
           >
             <div className="app__project-section-info">
-              <h4>{detail.subTitle}</h4>
+              <h4 style={{ color: project.themeColor }}>{detail.subTitle}</h4>
               <h3>{detail.title}</h3>
               <p>{detail.content}</p>
             </div>
