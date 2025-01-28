@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
@@ -17,7 +18,7 @@ const Navbar = () => {
         {["home", "about", "work", "skills", "contact"].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <HashLink smooth to={`/#${item}`}>{item}</HashLink>
           </li>
         ))}
       </ul>
