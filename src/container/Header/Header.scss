@@ -29,6 +29,9 @@
 
   @media screen and (max-width: 1200px) {
     flex-direction: column;
+
+    height: auto;
+    padding: 4rem 1rem;
   }
 
   @media screen and (max-width: 450px) {
@@ -87,6 +90,25 @@
       font-weight: 500;
       font-size: medium;
     }
+
+    @media screen and (max-width: 900px) {
+      padding: 0.8rem 1.5rem; /* Reduce box padding */
+      margin-top: 2rem; /* Adjust spacing above the box */
+      justify-content: center;
+
+      p {
+        font-size: 0.9rem; /* Make text slightly smaller */
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      padding: 0.6rem 1rem; /* Further reduce padding for very small screens */
+      margin-top: 1.5rem;
+
+      p {
+        font-size: 0.8rem; /* Smaller text for very small screens */
+      }
+    }
   }
 
   span {
@@ -101,6 +123,11 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
+
+  @media screen and (max-width: 450px) {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .app__header-circles {
@@ -111,14 +138,15 @@
   align-items: flex-start;
   height: 100%;
   margin-left: 1rem;
+  z-index: 1;
 
   div {
     position: relative;
     z-index: 2;
     width: 100px;
     height: calc(100px * 0.866);
-    // border-radius: 50%;
-    clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    border-radius: 50%;
+    // clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
 
     background: linear-gradient(-210deg, #fff, #e9e9e9);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -126,8 +154,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 1s ease-out; 
-    will-change: transform; 
+    transition: transform 1s ease-out;
+    will-change: transform;
 
     img {
       width: 60%;
@@ -136,7 +164,7 @@
   }
 
   div:hover {
-    transform: translateY(-10px); 
+    transform: translateY(-10px);
   }
 
   div:nth-child(1) {
@@ -184,6 +212,14 @@
       margin: 1rem;
     }
   }
+
+  @media screen and (max-width: 450px) {
+    height: 80%;
+    width: 100%;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    margin: 2rem 1rem 0rem 1rem;
+  }
 }
 
 .app__header-img {
@@ -211,6 +247,21 @@
     justify-content: right;
 
     color: var(--secondary-color);
+
+    @media screen and (max-width: 1200px) {
+      font-size: 6rem; /* Reduce size for tablets */
+      text-align: center; /* Align text to center on smaller screens */
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 5rem; /* Further reduce for mobile */
+      text-align: center;
+    }
+
+    @media screen and (max-width: 450px) {
+      font-size: 4rem;
+      text-align: center;
+    }
   }
 
   .overlay_circle {
