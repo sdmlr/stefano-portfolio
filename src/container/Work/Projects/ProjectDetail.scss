@@ -85,17 +85,21 @@
         h3 {
           color: #000;
         }
+
+        @media screen and (max-width: 450px) {
+          flex-direction: column;
+        }
       }
 
       @media screen and (min-width: 800px) and (max-width: 1300px) {
         padding: 2rem 4rem 2rem 4rem;
-        flex-direction: row;
+        flex-direction: column;
       }
       
 
       @media screen and (max-width: 1500px) {
         padding: 2rem 4rem 2rem 4rem;
-        flex-direction: row;
+        flex-direction: column;
       }
   
       @media screen and (max-width: 800px) {
