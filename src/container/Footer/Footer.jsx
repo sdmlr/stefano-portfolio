@@ -43,7 +43,7 @@ const Footer = () => {
     <>
       <h2 className="head-text">Chat with me</h2>
 
-      <div className="app__footer-cards">
+      {/* <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
           <a href="mailto:hello@gmail.com" className="p-text">
@@ -58,7 +58,7 @@ const Footer = () => {
             +44 1234 567 890
           </a>
         </div>
-      </div>
+      </div> */}
 
       {!isFormSubmitted ?
       <div className="app__footer-form app__flex">
