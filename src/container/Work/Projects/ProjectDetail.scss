@@ -29,8 +29,22 @@
       font-size: 1rem;
       color: #ffffff;
       line-height: 1.6;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
       padding: 2rem 25rem 2rem 25rem;
+
+      @media screen and (max-width: 1500px) {
+        padding: 2rem 4rem 2rem 4rem;
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 800px) {
+        padding: 0.5rem;
+        // flex-direction: column;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      padding: 5rem 2rem;
+      // flex-direction: column;
     }
   }
 
