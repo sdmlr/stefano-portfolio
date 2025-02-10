@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Analytics -->
+    <script>
+      const GA_ID = process.env.REACT_APP_GA_ID;
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", GA_ID);
+    </script>
+    <!-- End Google Analytics -->
     <meta charset="utf-8" />
     <link rel="icon" href="./logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="A showcase of projects and skills by Stefano Di Michele, including web development, design, and product management."
+    <meta
+      name="description"
+      content="A showcase of projects and skills by Stefano Di Michele, including web development, design, and product management."
     />
     <link rel="apple-touch-icon" href="./logo.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
