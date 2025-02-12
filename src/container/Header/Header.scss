@@ -1,3 +1,10 @@
+@mixin scale-down($max-width, $scale) {
+  @media screen and (max-width: $max-width) {
+    transform: scale($scale);
+  }
+}
+
+
 #home {
   position: relative;
   background: linear-gradient(145deg, #ffffff, #b1cae5);
@@ -21,7 +28,7 @@
   width: 100%;
   height: 100%;
 
-  padding: 6rem 2rem 0;
+  padding: 6rem 0rem 0;
 
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
@@ -46,11 +53,23 @@
   justify-content: flex-start;
   align-items: flex-start;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 50vw; /* Prevents it from stretching */
+
+  @media screen and (max-width: 1600px) {
+    max-width: 60vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 70vw;
+  }
 
   @media screen and (max-width: 2000px) {
-    width: 100%;
+    width: 50%;
     margin-right: 0rem;
   }
+  
 }
 
 .app__header-badge {
@@ -77,6 +96,16 @@
       border-radius: 50%;
       border: 2px solid #ffffffb7;
     }
+
+    @media screen and (max-width: 1600px) {
+      padding: 0.8rem 1rem; /* Reduce box padding */
+      margin-top: 2rem; /* Adjust spacing above the box */
+      justify-content: center;
+
+      p {
+        font-size: 0.9rem; /* Make text slightly smaller */
+      }
+    }
   }
 
   .tag-cmp {
@@ -92,7 +121,7 @@
     }
 
     @media screen and (max-width: 900px) {
-      padding: 0.8rem 1.5rem; /* Reduce box padding */
+      padding: 0.8rem 1rem; /* Reduce box padding */
       margin-top: 2rem; /* Adjust spacing above the box */
       justify-content: center;
 
@@ -119,7 +148,8 @@
     }
   }
 
-  @media screen and (max-width: 1200px) {
+
+  @media screen and (max-width: 1600px) {
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -128,6 +158,9 @@
     justify-content: center;
     align-items: center;
   }
+  
+  @include scale-down(1600px, 0.9);
+  @include scale-down(768px, 0.8);
 }
 
 .app__header-circles {
@@ -225,8 +258,8 @@
 .app__header-img {
   flex: 1;
   height: 100%;
-  margin-left: 15rem;
-  margin-right: 2rem;
+  // margin-left: 15rem;
+  // margin-right: 2rem;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -247,6 +280,11 @@
     justify-content: right;
 
     color: var(--secondary-color);
+
+    @media screen and (max-width: 1600px) {
+      font-size: 7rem; /* Reduce size for tablets */
+      text-align: center; /* Align text to center on smaller screens */
+    }
 
     @media screen and (max-width: 1200px) {
       font-size: 6rem; /* Reduce size for tablets */

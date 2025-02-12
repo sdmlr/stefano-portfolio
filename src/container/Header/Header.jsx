@@ -42,7 +42,7 @@ const Header = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <div className="prile-picture">
+            <div className="profile-picture">
               <img src={images.profile} alt="profile_bg" />
             </div>
             <div style={{ marginLeft: 10, marginRight: 5 }}>

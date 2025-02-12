@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid red;
+}
+
 .app {
     background-color: var(--primary-color);
     font-family: var(--font-base);
@@ -17,6 +21,7 @@
   
     display: flex;
     flex-direction: row;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
   }
   
   .app__flex {
@@ -30,7 +35,8 @@
     width: 100%;
     flex-direction: column;
     padding: 4rem 2rem;
-  
+    max-width: 100vw; /* Prevents it from exceeding viewport width */
+
     @media screen and (max-width: 450px) {
       padding: 4rem 1rem 2rem;
     }
@@ -96,6 +102,11 @@
       font-size: 0.9rem;
     }
   }
+
+  .app__social, .app__navigation {
+    max-width: 100vw;
+  }
+  
   
   .app__social {
     display: flex;
