@@ -20,7 +20,7 @@
 .env
 
 #privacy
-src/assets/
+# src/assets/
 
 npm-debug.log*
 yarn-debug.log*
